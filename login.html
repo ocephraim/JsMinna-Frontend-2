@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Hind:300,400,500,600&lang=en" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3 class="title">Log In</h3>
+            <p class="subtitle">Welcome back! Please fill in your details to log in.</p>
+        </div>
+        <form action="" name="myForm">
+            <div class="field">
+                <input onblur="validEmail(); login()" type="email" name="email" id="email" placeholder="Email">
+                <div class="error" id="err3"></div>
+            </div>
+            <div class="field">
+                <input onblur="validPassword(); login()" type="password" name="password" id="password" placeholder="Password">
+                <div class="error" id="err4"></div>
+            </div>
+
+            <button type="submit" class="submitBtn" onclick="loadPage()"> 
+                <i class="loader fa fa-spinner fa-spin"></i> 
+                <span class="btnText">Login</span> 
+            </button>
+        </form>
+    </div>
+    <div class="foot">Don't have an account? <a href="index.html">Create one</a> for free</div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
