@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Hind:400,500,600&lang=en" />
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3 class="title">Sign Up</h3>
+            <p class="subtitle">Welcome! Please fill in your details to create an account</p>
+        </div>
+        <form action="" name="myForm">
+            <div class="nameFields">
+                <div class="field">
+                    <input onblur="validFname(); signup()" class="name" name="fname" type="text" placeholder="First Name">
+                    <div class="error" id="err1"></div>
+                </div>
+                <div class="field">
+                    <input onblur="validLname(); signup()" class="name" name="lname" type="text" placeholder="Last Name">
+                    <div class="error" id="err2"></div>
+                </div>
+            </div> <!--nameFields-->
+            <div class="field">
+                <input onblur="validEmail(); signup()" type="email" name="email" id="email" placeholder="Email">
+                <div class="error" id="err3"></div>
+            </div>
+            <div class="field">
+                <input onblur="validPassword(); signup()" type="password" name="password" id="password" placeholder="Choose a Password">
+                <div class="error" id="err4"></div>
+            </div>
+            <div class="field">
+                <input onblur="confirmPassword(); signup()" type="password" name="cpassword" id="cpassword" placeholder="Confirm Password">
+                <div class="error" id="err5"></div>
+            </div>
+
+            <div class="terms">
+                <input onchange="signup()" type="checkbox" name="check" id="check">
+                <label for="check">I accept the <a href="">Terms of Use</a> & <a href="">Privacy Policy</a>.</label>
+            </div>
+
+            <button type="submit" class="submitBtn" onclick="loadPage()"> 
+                <i class="loader fa fa-spinner fa-spin"></i> 
+                <span class="btnText">Sign Up</span> 
+            </button>
+        </form>
+    </div>
+    <div class="foot">Already have an account? <a href="login.html">Login here</a></div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
